@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="要么庸俗要么孤独">
 <meta property="og:description" content="本文主要介绍了Vue的入门及简单介绍">
 <meta property="og:image" content="http://orzuutv5f.bkt.clouddn.com/01vue-helloworld.png">
-<meta property="og:updated_time" content="2017-06-24T02:46:50.281Z">
+<meta property="og:updated_time" content="2017-06-24T02:46:50.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue(入门及简介)">
 <meta name="twitter:description" content="本文主要介绍了Vue的入门及简单介绍">
@@ -39,6 +39,10 @@
     <link rel="shortcut icon" href="/img/me.png">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
@@ -105,6 +109,13 @@
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
       </ul>
     </div>
   </div>
@@ -161,12 +172,13 @@
 <div class="container body-wrap">
     
     <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
             <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#正文开始"><span class="post-toc-number">1.</span> <span class="post-toc-text">正文开始</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Vue入门之概念及Helloworld"><span class="post-toc-number">2.</span> <span class="post-toc-text">Vue入门之概念及Helloworld</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue简介"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Vue简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue的入门demo"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Vue的入门demo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue的Helloworld总结"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Vue的Helloworld总结</span></a></li></ol></li></ol>
         </nav>
     </aside>
-    
+
+
 <article id="post-vue入门简介"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -213,10 +225,11 @@
         </div>
 
         <blockquote class="post-copyright">
+    
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-06-24T02:46:50.281Z" itemprop="dateUpdated">2017-06-24 10:46:50</time>
+    Last updated: <time datetime="2017-06-24T02:46:50.282Z" itemprop="dateUpdated">2017-06-24 10:46:50</time>
 </span><br>
 
 
@@ -224,6 +237,7 @@
         这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/06/23/vue入门简介/" target="_blank" rel="external">http://yoursite.com/2017/06/23/vue入门简介/</a>
         
     </div>
+    
     <footer>
         <a href="http://yoursite.com">
             <img src="/img/me.png" alt="wyx">
@@ -299,9 +313,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/06/23/vue入门之Vue实例与生命周期/" id="post-prev" class="post-nav-link">
+      <a href="/2017/06/23/Vue入门之事件绑定处理/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Vue(Vue实例详解与生命周期)</h4>
+        <h4 class="title">Vue(Vue事件处理)</h4>
       </a>
     </div>
   
@@ -324,18 +338,35 @@
 
 
 
-<section class="comments" id="comments">
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
-    <!-- UY END -->
-</section>
 
 
 
 
 
 
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "C51sNguhuNJoV1cHLoclSxd3-gzGzoHsz",
+            appKey: "5P6sJYymydAEUILyF2amlnzd",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
 
 
 
@@ -393,7 +424,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>wyx &copy; 2015 - 2017</span>
+        <p><span>wyx &copy; 2015 - 2018</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

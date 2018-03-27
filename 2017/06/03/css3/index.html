@@ -37,6 +37,10 @@
     <link rel="shortcut icon" href="/img/me.png">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
@@ -103,6 +107,13 @@
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
       </ul>
     </div>
   </div>
@@ -159,12 +170,13 @@
 <div class="container body-wrap">
     
     <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
             <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#正文开始"><span class="post-toc-number">1.</span> <span class="post-toc-text">正文开始</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#摘要："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">摘要：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简介："><span class="post-toc-number">1.2.</span> <span class="post-toc-text">简介：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用CSS3有什么好处"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">使用CSS3有什么好处</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS3的现状"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">CSS3的现状</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS3的未来"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">CSS3的未来</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS3的兼容性问题"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">CSS3的兼容性问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么会有私有前缀"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">为什么会有私有前缀:</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何在工作学习中运用CSS3"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">如何在工作学习中运用CSS3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结束语"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">结束语</span></a></li></ol></li></ol>
         </nav>
     </aside>
-    
+
+
 <article id="post-css3"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -208,6 +220,7 @@
         </div>
 
         <blockquote class="post-copyright">
+    
     <div class="content">
         
 <span class="post-time">
@@ -219,6 +232,7 @@
         这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/06/03/css3/" target="_blank" rel="external">http://yoursite.com/2017/06/03/css3/</a>
         
     </div>
+    
     <footer>
         <a href="http://yoursite.com">
             <img src="/img/me.png" alt="wyx">
@@ -319,18 +333,35 @@
 
 
 
-<section class="comments" id="comments">
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
-    <!-- UY END -->
-</section>
 
 
 
 
 
 
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "C51sNguhuNJoV1cHLoclSxd3-gzGzoHsz",
+            appKey: "5P6sJYymydAEUILyF2amlnzd",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
 
 
 
@@ -388,7 +419,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>wyx &copy; 2015 - 2017</span>
+        <p><span>wyx &copy; 2015 - 2018</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

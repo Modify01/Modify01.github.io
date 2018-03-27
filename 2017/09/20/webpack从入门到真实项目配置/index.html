@@ -57,6 +57,10 @@
     <link rel="shortcut icon" href="/img/me.png">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
@@ -123,6 +127,13 @@
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
       </ul>
     </div>
   </div>
@@ -179,12 +190,13 @@
 <div class="container body-wrap">
     
     <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
             <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#正文部分"><span class="post-toc-number">1.</span> <span class="post-toc-text">正文部分</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Webpack-到底是什么"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Webpack 到底是什么</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单使用"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">简单使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Loader"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Loader</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Babel"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Babel</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#处理图片"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">处理图片</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#处理-CSS-文件"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">处理 CSS 文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何在项目中使用-webpack"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">如何在项目中使用 webpack</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分离代码"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">分离代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#抽取共同代码"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">抽取共同代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#按需加载代码"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">按需加载代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自动刷新"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">自动刷新</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#生成生产环境代码"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">生成生产环境代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#补充"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">补充</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#后记"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">后记</span></a></li></ol></li></ol>
         </nav>
     </aside>
-    
+
+
 <article id="post-webpack从入门到真实项目配置"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -472,6 +484,7 @@
         </div>
 
         <blockquote class="post-copyright">
+    
     <div class="content">
         
 <span class="post-time">
@@ -483,6 +496,7 @@
         这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/09/20/webpack从入门到真实项目配置/" target="_blank" rel="external">http://yoursite.com/2017/09/20/webpack从入门到真实项目配置/</a>
         
     </div>
+    
     <footer>
         <a href="http://yoursite.com">
             <img src="/img/me.png" alt="wyx">
@@ -555,7 +569,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/11/06/javascript风格指南/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Airbnb JavaScript风格指南（）</h4>
+      </a>
+    </div>
   
 
   
@@ -576,18 +597,35 @@
 
 
 
-<section class="comments" id="comments">
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
-    <!-- UY END -->
-</section>
 
 
 
 
 
 
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "C51sNguhuNJoV1cHLoclSxd3-gzGzoHsz",
+            appKey: "5P6sJYymydAEUILyF2amlnzd",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
 
 
 
@@ -645,7 +683,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>wyx &copy; 2015 - 2017</span>
+        <p><span>wyx &copy; 2015 - 2018</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

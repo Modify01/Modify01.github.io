@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/25/vue入门之路由/index.html">
 <meta property="og:site_name" content="要么庸俗要么孤独">
 <meta property="og:description" content="Vue路由详解">
-<meta property="og:updated_time" content="2017-06-25T09:06:12.847Z">
+<meta property="og:updated_time" content="2017-06-25T09:06:12.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue(Vue入门之路由详解)">
 <meta name="twitter:description" content="Vue路由详解">
@@ -37,6 +37,10 @@
     <link rel="shortcut icon" href="/img/me.png">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
@@ -103,6 +107,13 @@
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
       </ul>
     </div>
   </div>
@@ -159,12 +170,13 @@
 <div class="container body-wrap">
     
     <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
             <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#正文开始"><span class="post-toc-number">1.</span> <span class="post-toc-text">正文开始</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Vue路由详解"><span class="post-toc-number">2.</span> <span class="post-toc-text">Vue路由详解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue-router的版本对应"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Vue-router的版本对应</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue-router的安装使用"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">vue-router的安装使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue-router-入门demo"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">vue-router 入门demo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用vue-router的综合实例"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">使用vue-router的综合实例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#路由参数获取"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">路由参数获取</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#js控制路由跳转"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">js控制路由跳转</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#嵌套路由"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">嵌套路由</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">总结</span></a></li></ol></li></ol>
         </nav>
     </aside>
-    
+
+
 <article id="post-vue入门之路由"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -251,10 +263,11 @@
         </div>
 
         <blockquote class="post-copyright">
+    
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-06-25T09:06:12.847Z" itemprop="dateUpdated">2017-06-25 17:06:12</time>
+    Last updated: <time datetime="2017-06-25T09:06:12.848Z" itemprop="dateUpdated">2017-06-25 17:06:12</time>
 </span><br>
 
 
@@ -262,6 +275,7 @@
         这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/06/25/vue入门之路由/" target="_blank" rel="external">http://yoursite.com/2017/06/25/vue入门之路由/</a>
         
     </div>
+    
     <footer>
         <a href="http://yoursite.com">
             <img src="/img/me.png" alt="wyx">
@@ -346,9 +360,9 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/06/25/vue入门之vuex实战/" id="post-next" class="post-nav-link">
+      <a href="/2017/06/25/Vue之入门综合项目实战/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Vue入门之Vuex实战</h4>
+        <h4 class="title">Vue(Vue综合实战项目)</h4>
       </a>
     </div>
   
@@ -362,18 +376,35 @@
 
 
 
-<section class="comments" id="comments">
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
-    <!-- UY END -->
-</section>
 
 
 
 
 
 
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "C51sNguhuNJoV1cHLoclSxd3-gzGzoHsz",
+            appKey: "5P6sJYymydAEUILyF2amlnzd",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
 
 
 
@@ -431,7 +462,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>wyx &copy; 2015 - 2017</span>
+        <p><span>wyx &copy; 2015 - 2018</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

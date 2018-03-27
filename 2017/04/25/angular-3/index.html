@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/25/angular-3/index.html">
 <meta property="og:site_name" content="要么庸俗要么孤独">
 <meta property="og:description" content="本文主要介绍了AngularJS的数据绑定、scopes、module、controller、ajax、表达式">
-<meta property="og:updated_time" content="2017-05-14T14:15:26.117Z">
+<meta property="og:updated_time" content="2017-05-14T14:15:26.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularjs(三)">
 <meta name="twitter:description" content="本文主要介绍了AngularJS的数据绑定、scopes、module、controller、ajax、表达式">
@@ -37,6 +37,10 @@
     <link rel="shortcut icon" href="/img/me.png">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
@@ -103,6 +107,13 @@
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
       </ul>
     </div>
   </div>
@@ -159,12 +170,13 @@
 <div class="container body-wrap">
     
     <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
             <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#正文开始"><span class="post-toc-number">1.</span> <span class="post-toc-text">正文开始</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-数据绑定"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.数据绑定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-scopes、module、controller"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.scopes、module、controller</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-scopes"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">2.1 scopes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-module"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.2 module</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-ng-controller"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">2.3 ng-controller</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3-ajax"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">4.3 ajax</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-4表达式"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">4.4表达式</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
-    
+
+
 <article id="post-angular-3"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -218,10 +230,11 @@
         </div>
 
         <blockquote class="post-copyright">
+    
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-05-14T14:15:26.117Z" itemprop="dateUpdated">2017-05-14 22:15:26</time>
+    Last updated: <time datetime="2017-05-14T14:15:26.118Z" itemprop="dateUpdated">2017-05-14 22:15:26</time>
 </span><br>
 
 
@@ -229,6 +242,7 @@
         这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/04/25/angular-3/" target="_blank" rel="external">http://yoursite.com/2017/04/25/angular-3/</a>
         
     </div>
+    
     <footer>
         <a href="http://yoursite.com">
             <img src="/img/me.png" alt="wyx">
@@ -304,9 +318,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/04/25/angular-1/" id="post-prev" class="post-nav-link">
+      <a href="/2017/04/26/前端构建工具gulp入门教程/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">angularjs(一)</h4>
+        <h4 class="title">前端构建工具gulp入门教程</h4>
       </a>
     </div>
   
@@ -329,18 +343,35 @@
 
 
 
-<section class="comments" id="comments">
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
-    <!-- UY END -->
-</section>
 
 
 
 
 
 
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "C51sNguhuNJoV1cHLoclSxd3-gzGzoHsz",
+            appKey: "5P6sJYymydAEUILyF2amlnzd",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
 
 
 
@@ -398,7 +429,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>wyx &copy; 2015 - 2017</span>
+        <p><span>wyx &copy; 2015 - 2018</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

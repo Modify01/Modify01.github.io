@@ -29,7 +29,7 @@
 <meta property="og:description" content="本文主要介绍了Vue中的数据绑定机制">
 <meta property="og:image" content="http://orzuutv5f.bkt.clouddn.com/02vue%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A.jpg">
 <meta property="og:image" content="http://orzuutv5f.bkt.clouddn.com/03vue%E5%93%8D%E5%BA%94.png">
-<meta property="og:updated_time" content="2017-06-23T11:44:29.134Z">
+<meta property="og:updated_time" content="2017-06-23T11:44:29.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue(数据绑定)">
 <meta name="twitter:description" content="本文主要介绍了Vue中的数据绑定机制">
@@ -40,6 +40,10 @@
     <link rel="shortcut icon" href="/img/me.png">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
@@ -106,6 +110,13 @@
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
       </ul>
     </div>
   </div>
@@ -162,12 +173,13 @@
 <div class="container body-wrap">
     
     <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
             <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#正文开始"><span class="post-toc-number">1.</span> <span class="post-toc-text">正文开始</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Vue入门之数据绑定"><span class="post-toc-number">2.</span> <span class="post-toc-text">Vue入门之数据绑定</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是双向绑定？"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">什么是双向绑定？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue绑定文本"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Vue绑定文本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绑定数据中使用JavaScript表达式"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">绑定数据中使用JavaScript表达式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue属性绑定"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Vue属性绑定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输出纯HTML"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">输出纯HTML</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#样式绑定"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">样式绑定</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绑定样式对象"><span class="post-toc-number">2.6.1.</span> <span class="post-toc-text">绑定样式对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#混合普通的HTML标签样式类及绑定样式对象"><span class="post-toc-number">2.6.2.</span> <span class="post-toc-text">混合普通的HTML标签样式类及绑定样式对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绑定data中的样式对象"><span class="post-toc-number">2.6.3.</span> <span class="post-toc-text">绑定data中的样式对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绑定样式数组"><span class="post-toc-number">2.6.4.</span> <span class="post-toc-text">绑定样式数组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内联样式绑定"><span class="post-toc-number">2.6.5.</span> <span class="post-toc-text">内联样式绑定</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#计算属性"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">计算属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绑定的数据过滤器"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">绑定的数据过滤器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#核心：自动响应对象的变化到HTML标签"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">核心：自动响应对象的变化到HTML标签</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#双向数据绑定"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">双向数据绑定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据绑定总结"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">数据绑定总结</span></a></li></ol></li></ol>
         </nav>
     </aside>
-    
+
+
 <article id="post-vue数据绑定"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -250,10 +262,11 @@
         </div>
 
         <blockquote class="post-copyright">
+    
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-06-23T11:44:29.134Z" itemprop="dateUpdated">2017-06-23 19:44:29</time>
+    Last updated: <time datetime="2017-06-23T11:44:29.135Z" itemprop="dateUpdated">2017-06-23 19:44:29</time>
 </span><br>
 
 
@@ -261,6 +274,7 @@
         这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/06/23/vue数据绑定/" target="_blank" rel="external">http://yoursite.com/2017/06/23/vue数据绑定/</a>
         
     </div>
+    
     <footer>
         <a href="http://yoursite.com">
             <img src="/img/me.png" alt="wyx">
@@ -361,18 +375,35 @@
 
 
 
-<section class="comments" id="comments">
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
-    <!-- UY END -->
-</section>
 
 
 
 
 
 
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "C51sNguhuNJoV1cHLoclSxd3-gzGzoHsz",
+            appKey: "5P6sJYymydAEUILyF2amlnzd",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
 
 
 
@@ -430,7 +461,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>wyx &copy; 2015 - 2017</span>
+        <p><span>wyx &copy; 2015 - 2018</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
